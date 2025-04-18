@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://chatting-app-iota-three.vercel.app",
     credentials: true,
   })
 );
