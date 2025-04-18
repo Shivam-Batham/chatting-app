@@ -32,3 +32,5 @@ export const THEMES = [
   "nord",
   "sunset",
 ];
+
+export const ExpresBaseUrl = import.meta.env.VITE_MODE == "development" ? "http://localhost:5001/api" : `${import.meta.env.VITE_BASE_URL}/api`; 
