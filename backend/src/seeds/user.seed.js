@@ -100,7 +100,7 @@ const seedUsers = [
   },
 ];
 
-const seedDatabase = async () => {
+export default async function seedDatabase ()  {
   try {
     await connectDB();
 
@@ -111,5 +111,5 @@ const seedDatabase = async () => {
   }
 };
 
-// Call the function
-seedDatabase();
+// // Call the function
+// seedDatabase();

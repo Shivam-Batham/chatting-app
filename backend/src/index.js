@@ -10,6 +10,7 @@ import { connectDB } from "./lib/db.js";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import { app, server } from "./lib/socket.js";
+import seedDatabase from "./seeds/user.seed.js";
 
 dotenv.config();
 
@@ -35,7 +36,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
-
+seedDatabase();
 server.listen(PORT, () => {
   console.log("server is running on PORT:" + PORT);
   connectDB();
